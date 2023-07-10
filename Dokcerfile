@@ -1,0 +1,6 @@
+FROM openjdk:11
+COPY . /app
+WORKDIR /app
+RUN ./mvnw clean install
+EXPOSE 8083
+CMD ["java", "-jar", "target/your-application.jar"]
